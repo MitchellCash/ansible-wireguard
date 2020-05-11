@@ -1,0 +1,6 @@
+---
+- name: Generate a private and public key pair for the WireGuard server.
+  shell: wg genkey | tee privatekey | wg pubkey > publickey
+
+- set_fact: Generate a private and public key pair for the WireGuard server.
+  string_to_echo: "{{ command_output.stdout }}"

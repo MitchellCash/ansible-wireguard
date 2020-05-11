@@ -1,0 +1,6 @@
+---
+- import_tasks: setup.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- include_tasks: configure.yml
+  when: ansible_distribution == 'Ubuntu'
